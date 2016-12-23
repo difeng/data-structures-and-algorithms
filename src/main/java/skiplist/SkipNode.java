@@ -11,11 +11,11 @@ public class SkipNode<K,V>{
     SkipNode<K,V>[] forward; 
     
     @SuppressWarnings("unchecked")
-	public SkipNode(K k,V v,int level){
+	public SkipNode(K k,V v,int level) {
     	this.k = k;
     	this.v = v;
-    	forward = (SkipNode<K,V>[])new SkipNode[level];
-        for(int i = 0;i < level;i++){
+    	forward = (SkipNode<K,V>[])new SkipNode[level + 1];
+        for(int i = 0;i < level;i++) {
         	forward[i] = null;
         }
     }
